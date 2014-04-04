@@ -36,9 +36,10 @@ public class ElTestLoco {
 	  @Test
 	  @PrepareForTest(Dummy.class)
 	public void staticTest() {
+		TestableClass testableClass = new TestableClass(dummy);
 		PowerMockito.mockStatic(Dummy.class);
 		Mockito.when(Dummy.metodoStatic()).thenReturn(2);
-		int resultado = Dummy.metodoStatic();
+		int resultado = testableClass.saraza();
 		assertEquals(2, resultado);
 	}
 

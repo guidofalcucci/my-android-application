@@ -12,5 +12,10 @@ public class TestableClass {
 		dummy.dummyMethod();
 	}
 	
+	public int saraza()
+	{
+		return Dummy.metodoStatic();
+	}
+	
 
 }
